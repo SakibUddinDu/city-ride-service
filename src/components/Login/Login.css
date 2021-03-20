@@ -1,0 +1,42 @@
+/* .login {
+  background-color: white;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 50px 100px;
+  text-align: center;
+}
+
+.google-fb {
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ffaf38;
+} */
+
+.form-style {
+  border: 1px solid black;
+  width: 30%;
+  margin: 30px auto;
+  padding: 20px;
+}
+.google-icon {
+  height: 30px;
+  width: 30px;
+  /* margin-right: 10%; */
+}
+.fb-icon {
+  height: 30px;
+  width: 30px;
+  /* margin-right: 10%; */
+}
+.signIn-button {
+  width: 25%;
+  height: 10%;
+  background-color: orange;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid orange;
+  color: black;
+}

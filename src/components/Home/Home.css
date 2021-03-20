@@ -1,0 +1,8 @@
+.bgImage {
+  /* backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url()` */
+  background-image: url(../../images/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}

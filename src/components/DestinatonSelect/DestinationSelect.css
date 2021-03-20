@@ -1,0 +1,25 @@
+.destination-details {
+  display: flex;
+}
+.destination-info {
+  word-wrap: break-word;
+  /* margin-left: 80px; */
+  margin-top: 50px;
+  color: #fff;
+}
+.destination-info h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 72px;
+  color: #fff;
+}
+.destination-info p {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(216, 199, 199);
+  font-weight: 20px;
+}
+
+.booking-info {
+  width: 100%;
+  border: 1px solid #fff;
+  color: rgb(44, 41, 41);
+}

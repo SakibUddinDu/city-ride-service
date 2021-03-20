@@ -1,0 +1,27 @@
+.navItems {
+  margin-left: 35%;
+}
+.navItems Link {
+  /* padding: 5%; */
+  margin-right: 10px;
+}
+/* .header img {
+  height: 80px;
+}
+.header {
+  text-align: center;
+}
+.header nav {
+  background-color: black;
+  line-height: 40px;
+  font-size: 20px;
+} */
+Nav a {
+  text-decoration: none;
+  color: rgb(22, 22, 22);
+  margin-right: 20px;
+  padding: 5px;
+}
+Nav a:hover {
+  background-color: gray;
+}
