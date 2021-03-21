@@ -3,20 +3,23 @@ import { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import DestinationSelect from "./components/DestinatonSelect/DestinationSelect";
+import Details from "./components/Details/Details";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import NotMatched from "./components/NotMatched/NotMatched";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Details from "./Details/Details";
 
 
 export const UserContext = createContext();
-
+export const RideContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [ride, setRide] = useState({});
+
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <RideContext.Provider value={ [ride, setRide]}>
       <Router>
         <Switch>
           <Route path="/home">
@@ -29,9 +32,9 @@ function App() {
            <Route path="/destination">
             <DestinationSelect />
           </Route> */}
-          <Route path="/details/:id">
+          <PrivateRoute path="/details/:rideId">
             <Details/>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/destination">
             <DestinationSelect />
           </PrivateRoute>
@@ -48,6 +51,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </RideContext.Provider>
     </UserContext.Provider>
   );
 }

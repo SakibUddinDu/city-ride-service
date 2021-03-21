@@ -1,32 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 // import DatePicker from 'react-datepicker';
-import { Link, useParams } from 'react-router-dom';
-import fakeData from '../FakeData/CardData';
+import { Link } from 'react-router-dom';
+import { RideContext } from '../../App';
 import GoogleMap from '../GoogleMap/GoogleMap';
 import './DestinationSelect.css';
 
 
 const DestinationSelect = () => {
+    const [ride, setRide]= useContext(RideContext)
+    // const history = useHistory();
+    // const { rideId } = useParams();
+    // console.log(rideId)
+    
 
-  const [startingPlace, setStartingPlace] = useState("")
-  console.log(startingPlace);
-  const [endPlace, setEndPlace] = useState("")
-  console.log(endPlace);
-    const { id } = useParams();
-
-    const data = fakeData;
-    data.find(destination => destination.id === id)
-
-    const handleBlur = (e) =>{
-        console.log(e.target.value)
-        setStartingPlace(e.target.value)
-}
-    const handleBlur1 = (e) =>{
-        console.log(e.target.value)
-        setEndPlace(e.target.value)
-}
-
+    // const data = FakeData;
+    // data.find(destination => destination.id === rideId)
 
     // const [startDate, setStartDate] = useState(new Date("2020/10/01"));
     // const [endDate, setEndDate] = useState(new Date("2020/10/30"));
@@ -34,23 +23,16 @@ const DestinationSelect = () => {
 
     return (
         <div className="destination-details " >
-            <div className="destination-info">
-                {id}
-             {/* {   <img src={data[id].pic}></img>} */}
-                {/* <p>{data[Id].description}</p> */}
-            </div>
-
-
-            <div>
+            <div className="col-md-4">
                 <Form className="booking-info bg-light p-5 m-5">
                     <Form.Group controlId="formBasicOrigin">
-                        <Form.Label>Origin</Form.Label>
-                        <Form.Control type="text" onBlur={handleBlur} placeholder="Your Origin" />
+                        <Form.Label>Origin </Form.Label>
+                        <Form.Control type="text" placeholder="Your Origin" />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicDestination">
                         <Form.Label>Destination</Form.Label>
-                        <Form.Control type="text" onBlur={handleBlur1} placeholder="Your Destination" />
+                        <Form.Control type="text" placeholder="Your Destination" />
                     </Form.Group>
 
                     {/* <Form.Group className=" d-flex mt-5">
@@ -79,14 +61,17 @@ const DestinationSelect = () => {
                         /> 
                     </Form.Group>*/}
                     {/* <Link to={`/details/${transport.id}`}> */}
-                    <Link to={`/details/${id}`}>
+                    <Link to={`/details/${ride.id}`}>
+                    {/* <Link to="/details"> */}
                         <Button variant="warning" type="submit" className="m-2 form-control"> Search</Button>
                     </Link>
 
                 </Form>
                 
             </div>
+            <div className="col-md-8">
             <GoogleMap/>
+            </div>
         </div>
     );
 };

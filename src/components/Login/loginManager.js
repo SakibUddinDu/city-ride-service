@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 
 // firebase.initializeApp(firebaseConfig);
 export const initializeLoginFramework = () => {
+
   if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
   }
@@ -96,13 +97,13 @@ export const handleSignOut = () =>{
 
 
 export const createUserWithEmailAndPassword = (name, email, password) => {
-   return firebase.auth().createUserWithEmailAndPassword(email, password)
+   return firebase.auth().createUserWithEmailAndPassword(name, email, password)
         .then(res => {
           const newUserInfo = res.user;
           newUserInfo.error = ' ';
           newUserInfo.success = true;
-        updateUserName(name)
-        return newUserInfo;
+          updateUserName(name)
+          return newUserInfo;
         })
 
         .catch(error => {
