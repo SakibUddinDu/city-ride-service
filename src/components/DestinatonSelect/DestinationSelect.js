@@ -4,16 +4,12 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { RideContext } from '../../App';
 import GoogleMap from '../GoogleMap/GoogleMap';
+import Header from '../Header/Header';
 import './DestinationSelect.css';
 
 
 const DestinationSelect = () => {
     const [ride, setRide]= useContext(RideContext)
-    // const history = useHistory();
-    // const { rideId } = useParams();
-    // console.log(rideId)
-    
-
     // const data = FakeData;
     // data.find(destination => destination.id === rideId)
 
@@ -22,8 +18,10 @@ const DestinationSelect = () => {
 
 
     return (
-        <div className="destination-details " >
+        <div className="container row" >
+           
             <div className="col-md-4">
+            <Header></Header>
                 <Form className="booking-info bg-light p-5 m-5">
                     <Form.Group controlId="formBasicOrigin">
                         <Form.Label>Origin </Form.Label>
@@ -60,9 +58,8 @@ const DestinationSelect = () => {
                             minDate={startDate}
                         /> 
                     </Form.Group>*/}
-                    {/* <Link to={`/details/${transport.id}`}> */}
+           
                     <Link to={`/details/${ride.id}`}>
-                    {/* <Link to="/details"> */}
                         <Button variant="warning" type="submit" className="m-2 form-control"> Search</Button>
                     </Link>
 
@@ -79,47 +76,6 @@ const DestinationSelect = () => {
 export default DestinationSelect;
 
 
-// import React, { useState } from 'react';
-// import './Places.css';
-// import { locationData } from '../fakeDataLocation/fakeDataLocation';
-// import Place from '../Place/Place';
-// import { useHistory } from 'react-router-dom';
-
-// const Places = () => {
-
-//     const history = useHistory();
-
-//     const [selectedPlace, setSelectedPlace] = useState(locationData[0]);
-
-//     const handleClick = (data) => {
-//         setSelectedPlace(data);
-//     }
-
-//     const handleBooking = () => {
-//         history.push( `/booking/${selectedPlace.id}`);
-//     }
-
-//     return (
-//         <div>
-//             <div className="row">
-//                 <div className="col-md-3 heading">
-//                     <h1>{selectedPlace.name}</h1>
-//                     <p>{selectedPlace.description}</p>
-//                     <button onClick={handleBooking} className="custom-btn">Booking</button>
-//                 </div>
-//                 <div className="col-md-8 pictures">
-//                 {
-//                     locationData.map(place => <Place handleClick={handleClick} selectedPlace={selectedPlace} data={place}></Place>)
-//                 }
-                
-//                 </div>
-//             </div>
-//         </div>
-        
-//     );
-// };
-
-// export default Places;
 
 
 

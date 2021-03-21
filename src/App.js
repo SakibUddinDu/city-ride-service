@@ -9,48 +9,43 @@ import Login from "./components/Login/Login";
 import NotMatched from "./components/NotMatched/NotMatched";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
-
 export const UserContext = createContext();
 export const RideContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   const [ride, setRide] = useState({});
 
-
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <RideContext.Provider value={ [ride, setRide]}>
-      <Router>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-{/*                     
-           <Route path="/destination">
-            <DestinationSelect />
-          </Route> */}
-          <PrivateRoute path="/details/:rideId">
-            <Details/>
-          </PrivateRoute>
-          <PrivateRoute path="/destination">
-            <DestinationSelect />
-          </PrivateRoute>
-          {/* <Route path="/bookedItems">
-            <BookedItems />
-          </Route> */}
+      <RideContext.Provider value={[ride, setRide]}>
+        <Router>
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-          <Route path="*">
-            <NotMatched />
-          </Route>
-        </Switch>
-      </Router>
+            <PrivateRoute path="/details/:rideId">
+              <Details />
+            </PrivateRoute>
+
+            <PrivateRoute path="/destination">
+              <DestinationSelect />
+            </PrivateRoute>
+
+            <Route exact path="/">
+              <Home />
+            </Route>
+
+            <Route path="*">
+              <NotMatched />
+            </Route>
+
+          </Switch>
+        </Router>
       </RideContext.Provider>
     </UserContext.Provider>
   );
