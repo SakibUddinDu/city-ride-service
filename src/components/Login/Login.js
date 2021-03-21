@@ -107,22 +107,7 @@ function Login() {
       )} */}
 
       <br />
-      {/* <button onClick={handleFbSignIn}>Sign In with FB</button> */}
-
-      {/* {user.isSignedIn && (
-        <div>
-          <p>Welcome, {user.name}</p>
-          <p>Email : {user.email}</p>
-          <img src={user.photo} alt="" />
-        </div>
-       
-      )}  */}
-      {/* <h1>Our own Authentication</h1>
-    <input type="checkbox"  onChange={ () =>setNewUser(!newUser)} name="newUser" id=""/>
-    <label htmlFor="newUser">NewUser Sign Up</label> */}
-      {/* <p> Name : {user.name}</p>
-    <p>Email : {user.email}</p>
-    <p>Password : {user.password}</p> */}
+     
       <form className="form-style " onSubmit={handleSubmit}>
         <h1> {newUser ? "Create an account" : "Log In"}</h1>
         {newUser && (
