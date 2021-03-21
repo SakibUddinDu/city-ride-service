@@ -1,4 +1,3 @@
-//before refactor and handleSignin Modified
 import firebase from "firebase/app";
 import "firebase/auth";
 import React, { useContext, useState } from "react";
@@ -11,15 +10,12 @@ import Header from "../Header/Header";
 import firebaseConfig from "./firebase.config.js";
 import "./Login.css";
 
-// firebase.initializeApp(firebaseConfig);
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
 function Login() {
-  // const newUser,useState(false)
   const [newUser, setNewUser] = useState(false);
-
   const [user, setUser] = useState({
     isSignedIn: false,
     name: " ",
@@ -40,8 +36,6 @@ function Login() {
       .signInWithPopup(provider)
       .then((res) => {
         const { displayName, email, photoURL } = res.user;
-        // console.log(displayName, email, photoURL)
-        // console.log(res);
         const signedInUser = {
           isSignedIn: true,
           name: displayName,
@@ -56,14 +50,8 @@ function Login() {
       })
       .catch((error) => {
         // Handle Errors here.
-        // var errorCode = error.code;
         console.log(error);
         console.log(error.message);
-        // // The email of the user's account used.
-        // var email = error.email;
-        // // The firebase.auth.AuthCredential type that was used.
-        // var credentical = error.credential;
-        // // ...
       });
   };
 
@@ -116,12 +104,11 @@ function Login() {
       .catch((error) => {
         // An error happened.
       });
-    // console.log('SignOut Clicked');
+
   };
 
   // Fields Validation
   const handleBlur = (event) => {
-    // console.log(event.target.name, event.target.value);
     let isFieldValid = true;
     if (event.target.name === "email") {
       const isFieldValid = /\S+@\S+\.\S+/.test(event.target.value);
@@ -136,10 +123,8 @@ function Login() {
       newUserInfo[event.target.name] = event.target.value;
       setUser(newUserInfo);
     }
-    // console.log(event.target.value);
   };
   const handleSubmit = (event) => {
-    // console.log(user.email , user.password);
     if (newUser && user.email && user.password) {
       firebase
         .auth()
@@ -151,10 +136,6 @@ function Login() {
           newUserInfo.success = true;
           setUser(newUserInfo);
           updateUserName(user.name);
-          // history.replace(from)
-
-          // var user = userCredential.user;
-          // ...
         })
         .catch((error) => {
           // var errorCode = error.code;
@@ -162,12 +143,9 @@ function Login() {
           newUserInfo.error = error.message;
           newUserInfo.success = false;
           setUser(newUserInfo);
-          // var errorMessage = error.message;
-          // console.log(errorMessage);
-          // ..
         });
     }
-    // console.log("Clicked");
+
     if (!newUser && user.email && user.password) {
       firebase
         .auth()
@@ -180,8 +158,6 @@ function Login() {
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
           history.replace(from);
-          console.log("sign in user Info ", userCredential.user);
-          // ...
         })
         .catch((error) => {
           const newUserInfo = { ...user };
@@ -213,14 +189,13 @@ function Login() {
   return (
     <div className="App">
       <Header></Header>
-      {user.isSignedIn ? (
+      {/* {user.isSignedIn ? (
         <button onClick={handleSignOut}>Sign Out</button>
       ) : (
         <button onClick={handleSignIn}>Sign In</button>
-      )}
+      )} */}
 
       <br />
-      {/* <button onClick={handleFbSignIn}>Sign In with FB</button> */}
 
       {user.isSignedIn && (
         <div>
@@ -229,12 +204,7 @@ function Login() {
           <img src={user.photo} alt="" />
         </div>
       )}
-      {/* <h1>Our own Authentication</h1>
-    <input type="checkbox"  onChange={ () =>setNewUser(!newUser)} name="newUser" id=""/>
-    <label htmlFor="newUser">NewUser Sign Up</label> */}
-      {/* <p> Name : {user.name}</p>
-    <p>Email : {user.email}</p>
-    <p>Password : {user.password}</p> */}
+  
       <form className="form-style " onSubmit={handleSubmit}>
         <h1> {newUser ? "Create an account" : "Log In"}</h1>
         {newUser && (
@@ -335,6 +305,7 @@ function Login() {
 }
 
 export default Login;
+
 
 // import React, { useContext, useState } from "react";
 // import { Button } from "react-bootstrap";

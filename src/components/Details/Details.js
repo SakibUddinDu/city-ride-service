@@ -1,21 +1,15 @@
 import React, { useContext } from "react";
 import { Card, ListGroup } from "react-bootstrap";
-// import { Card, ListGroup } from "react-bootstrap";
 import { RideContext } from "../../App";
 import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import icon from "../../images/peopleicon.png";
-import bookingDetailsData from "../FakeData/bookingDetailsData";
 import Header from "../Header/Header";
 import "./Details.css";
 
 const Details = () => {
   const [ride, setRide] = useContext(RideContext);
-  const data = bookingDetailsData;
 
-  // const { id } = useParams();
-  // console.log(id)
 
-  // data.find(destination => destination.id === id)
   return (
     <div className="container row">
       <div className="col-md-4">

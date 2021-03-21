@@ -13,7 +13,6 @@ const Header = () => {
         <Navbar expand="lg" >
           <Navbar.Brand href="#">
             <h1>City Rider Service</h1>
-            {/* <img id="logo" src={logo} alt="" /> */}
           </Navbar.Brand>
      
           <Nav className="mr-5 navItems">
@@ -21,10 +20,9 @@ const Header = () => {
             <Link  to="/destination">Destination</Link>
             <Link to="/blog">Blog</Link>
             <Link to="contact">Contact</Link>
-            <Button onClick={() =>setLoggedInUser({})} variant="outline-success">Login</Button>
+
+            <Button onClick={() =>setLoggedInUser({})} variant="outline-dark">LogIn</Button>
           </Nav>
-   
-          {/* <Button variant="outline-success">Login</Button> */}
         </Navbar>
       </Container>
     </div>
