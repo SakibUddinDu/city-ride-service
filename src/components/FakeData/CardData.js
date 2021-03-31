@@ -33,3 +33,108 @@ const CardData= [{
   }]
 
   export default CardData;
+
+
+  // const CardData= [{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 1,
+  //   "name": "Bike",
+  //   "pic": "https://i.ibb.co/PYYLCDp/Frame.png",
+  //   "price":"52",
+  // },{
+  //   "id": 4,
+  //   "name": "Train",
+  //   "pic": "https://i.ibb.co/vD71vw4/Group.png",
+  //   "price":"82",
+  // }]
+
+  // export default CardData;

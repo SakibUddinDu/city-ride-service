@@ -10,6 +10,7 @@ import './DestinationSelect.css';
 
 const DestinationSelect = () => {
     const [ride, setRide]= useContext(RideContext)
+    // console.log(ride);
     // const data = FakeData;
     // data.find(destination => destination.id === rideId)
 
@@ -19,9 +20,9 @@ const DestinationSelect = () => {
 
     return (
         <div className="container row" >
-           
+           <Header></Header>
             <div className="col-md-4">
-            <Header></Header>
+            
                 <Form className="booking-info bg-light p-5 m-5">
                     <Form.Group controlId="formBasicOrigin">
                         <Form.Label>Origin </Form.Label>

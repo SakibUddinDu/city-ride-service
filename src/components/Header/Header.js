@@ -19,9 +19,10 @@ const Header = () => {
             <Link to="/home">Home</Link>
             <Link  to="/destination">Destination</Link>
             <Link to="/blog">Blog</Link>
-            <Link to="contact">Contact</Link>
-
-            <Button onClick={() =>setLoggedInUser({})} variant="outline-dark">LogIn</Button>
+            <Link to="/contact">Contact</Link>
+            <Link to="/login">
+                <Button  variant="outline-dark">LogIn</Button>
+            </Link>
           </Nav>
         </Navbar>
       </Container>

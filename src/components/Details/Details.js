@@ -8,12 +8,14 @@ import "./Details.css";
 
 const Details = () => {
   const [ride, setRide] = useContext(RideContext);
+  // console.log(ride);
 
 
   return (
     <div className="container row">
+      <Header></Header>
       <div className="col-md-4">
-        <Header></Header>
+        
         <Card style={{ width: "18rem" }}>
           <div style={{ backgroundColor: "blue" }}>
             <div className="status">
